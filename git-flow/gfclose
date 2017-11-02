@@ -1,1 +1,1 @@
-git flow $(git_current_branch | sed 's/\([a-z]*\)\/\(.*\)/\1 finish \2/')
+git flow $(git status | grep 'On branch' | sed 's/.* \([a-z]*\)\/\(.*\)/\1 finish \2/')
