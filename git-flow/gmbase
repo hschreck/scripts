@@ -1,0 +1,5 @@
+MERGE_BRANCH=$(git status | grep 'On branch' | sed 's/.* \(.*\)$/\1/')
+
+MERGE_INTO=$1
+
+git checkout $MERGE_INTO && git merge $MERGE_BRANCH
